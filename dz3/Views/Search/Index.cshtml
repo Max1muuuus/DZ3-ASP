@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Пошук</title>
+</head>
+
+<body>
+
+    <h1>Пошук</h1>
+
+    <form action="/Search/Index" method="get">
+
+        <input type="text" name="query" />
+
+        <button type="submit">Шукати</button>
+
+    </form>
+
+    @if (!string.IsNullOrEmpty(ViewBag.Query))
+    {
+        <h2>Результат пошуку:</h2>
+
+        <p>Ви шукаєте: <strong>@ViewBag.Query</strong></p>
+    }
+
+</body>
+</html>
